@@ -1,105 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MENDEZ WOOD WORK AND FLOWERS — arte natural, madera y flores. Piezas únicas elaboradas una a una.">
-<title>MENDEZ WOOD WORK AND FLOWERS</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="MENDEZ WOOD WORK AND FLOWERS — piezas artesanales que combinan madera y flores.">
+  <meta name="theme-color" content="#344c39">
+  <title>MENDEZ WOOD WORK AND FLOWERS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="site-header">
   <a class="brand" href="#inicio">
-    <img src="assets/logo.jpeg" alt="MENDEZ WOOD WORK AND FLOWERS">
+    <img src="assets/logo.jpeg" alt="MENDEZ WOOD WORK AND FLOWERS" class="logo">
+    <span class="brand-text"><strong>MENDEZ</strong><small>WOOD WORK AND FLOWERS</small></span>
   </a>
   <nav>
-    <a href="#inicio">Inicio</a><a href="#catalogo">Colección</a><a href="#galeria">Galería</a><a href="#nosotros">Nuestra historia</a><a href="#contacto">Contacto</a>
+    <a href="#inicio">Inicio</a><a href="#catalogo">Colección</a><a href="#videos">Videos</a>
+    <a href="#historia">Nuestra historia</a><a href="#contacto">Contacto</a>
   </nav>
   <button class="cart-button" onclick="openCart()">🛒 <span>Carrito</span> <b id="cartCount">0</b></button>
 </header>
 
 <main>
 <section id="inicio" class="hero">
-  <div class="hero-bg"></div><div class="hero-shade"></div>
+  <div class="hero-image"></div><div class="hero-shade"></div>
   <div class="hero-content">
     <p class="eyebrow">ARTE NATURAL · DISEÑO CON ALMA</p>
-    <h1>La nobleza de la madera<br>se encuentra con las flores.</h1>
-    <p>Creamos composiciones únicas que conectan con la esencia de la naturaleza y transforman espacios.</p>
-    <div class="hero-actions"><a class="btn primary" href="#catalogo">Ver colección</a><a class="btn ghost" href="#nosotros">Conocer nuestra historia</a></div>
+    <h1>Madera y flores<br>convertidas en arte.</h1>
+    <p>Cada pieza es una obra única, elaborada una a una para transformar espacios y crear recuerdos.</p>
+    <div class="hero-actions"><a class="btn primary" href="#catalogo">Ver colección</a><a class="btn outline" href="#historia">Conócenos</a></div>
   </div>
 </section>
 
 <section class="values section">
-  <div class="value"><span>◉</span><h3>MADERA ÚNICA</h3><p>Seleccionamos piezas de madera por su forma, su historia y su belleza natural.</p></div>
-  <div class="value"><span>✿</span><h3>ARREGLOS EXCLUSIVOS</h3><p>Cada composición floral se diseña de manera individual con flores y elementos naturales.</p></div>
-  <div class="value"><span>♧</span><h3>ARTE ARTESANAL</h3><p>Trabajamos cada detalle para crear piezas con armonía, sofisticación y carácter.</p></div>
-  <div class="value"><span>⌂</span><h3>TRANSFORMA ESPACIOS</h3><p>Diseños para hogares, oficinas, hoteles, recepciones y espacios especiales.</p></div>
+  <div class="value"><span>◉</span><h3>Madera única</h3><p>Piezas seleccionadas por su forma, historia y belleza natural.</p></div>
+  <div class="value"><span>✿</span><h3>Arreglos exclusivos</h3><p>Composiciones diseñadas de manera individual con flores y elementos naturales.</p></div>
+  <div class="value"><span>⌁</span><h3>Arte artesanal</h3><p>Trabajamos cada detalle para crear piezas con identidad y carácter.</p></div>
+  <div class="value"><span>⌂</span><h3>Transforma espacios</h3><p>Diseños para hogares, oficinas, hoteles, recepciones y espacios especiales.</p></div>
 </section>
 
-<section id="catalogo" class="section">
-  <div class="section-heading"><div><p class="eyebrow">COLECCIÓN</p><h2>Piezas que cuentan una historia.</h2></div><p>Cada diseño es diferente. Los nombres y precios podrán actualizarse cuando definas el catálogo.</p></div>
-  <div class="filters" id="filters"></div>
-  <div class="product-grid" id="productGrid"></div>
-</section>
-
-<section id="galeria" class="section gallery-section">
-  <div class="section-heading"><div><p class="eyebrow">GALERÍA</p><h2>Conoce nuestro trabajo</h2></div></div>
-  <div class="gallery-feature"><img src="assets/catalogo.jpeg" alt="Colección de diseños MENDEZ"></div>
-  <div class="gallery-photos">
-    <img src="assets/producto-1.jpeg" alt="Diseño floral artesanal 1">
-    <img src="assets/producto-2.jpeg" alt="Diseño floral artesanal 2">
-    <img src="assets/producto-3.jpeg" alt="Diseño floral artesanal 3">
-    <img src="assets/producto-4.jpeg" alt="Diseño floral artesanal 4">
+<section id="catalogo" class="section catalog-section">
+  <div class="section-heading">
+    <div><p class="eyebrow">COLECCIÓN</p><h2>Ocho diseños para comenzar</h2><p class="section-intro">Los nombres y precios son provisionales. Cuando los definas, solo tendremos que cambiar los datos del catálogo.</p></div>
+    <div id="filters" class="filters"></div>
   </div>
+  <div id="productGrid" class="product-grid"></div>
+</section>
+
+<section id="videos" class="section videos-section">
+  <div class="section-heading"><div><p class="eyebrow">EL PROCESO</p><h2>Conoce nuestro trabajo</h2></div><p>Dos videos reales de MENDEZ WOOD WORK AND FLOWERS.</p></div>
   <div class="video-grid">
-    <article class="video-card"><video controls preload="metadata" poster="assets/video-1-poster.jpg"><source src="assets/video-1.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><h3>Elaboración y detalle</h3><p>Un vistazo al trabajo artesanal.</p></article>
-    <article class="video-card"><video controls preload="metadata" poster="assets/video-2-poster.jpg"><source src="assets/video-2.mp4" type="video/mp4">Tu navegador no puede reproducir este video.</video><h3>Diseño y naturaleza</h3><p>Descubre la esencia de nuestras piezas.</p></article>
+    <article class="video-card"><video controls playsinline webkit-playsinline preload="metadata" poster="assets/video-1-poster.jpg"><source src="assets/video-1.mp4" type="video/mp4">Tu navegador no puede reproducir este video. <a href="assets/video-1.mp4">Abrir video</a></video><div><h3>Proceso artesanal</h3><p>Una mirada al trabajo detrás de cada pieza.</p></div></article>
+    <article class="video-card"><video controls playsinline webkit-playsinline preload="metadata" poster="assets/video-2-poster.jpg"><source src="assets/video-2.mp4" type="video/mp4">Tu navegador no puede reproducir este video. <a href="assets/video-2.mp4">Abrir video</a></video><div><h3>Detalles que hacen la diferencia</h3><p>Conoce parte de nuestra inspiración y elaboración.</p></div></article>
   </div>
 </section>
 
-<section id="nosotros" class="story section">
-  <div class="story-image"><img src="assets/producto-4.jpeg" alt="Trabajo artesanal MENDEZ"></div>
-  <div class="story-content">
+<section class="gallery section">
+  <div class="section-heading"><div><p class="eyebrow">GALERÍA</p><h2>Diseños y detalles</h2></div></div>
+  <div class="gallery-grid">
+    <img src="assets/galeria-1.jpeg" alt="Diseño floral y madera">
+    <img src="assets/galeria-2.jpeg" alt="Diseño artesanal con madera">
+    <img src="assets/galeria-3.jpeg" alt="Composición floral">
+    <img src="assets/galeria-4.jpeg" alt="Composición con madera y flores">
+  </div>
+</section>
+
+<section id="historia" class="story section">
+  <div class="story-copy">
     <p class="eyebrow">NUESTRA HISTORIA</p>
     <h2>Artesanía que une dos mundos.</h2>
-    <p>MENDEZ WOOD WORK AND FLOWERS nace del amor por la naturaleza, la madera y las flores.</p>
-    <p>Fusionamos técnicas artesanales con diseño contemporáneo para crear piezas únicas que conectan con la esencia de lo natural y lo transforman en arte.</p>
-    <p>Nuestro propósito es llevar belleza, armonía y autenticidad a cada espacio.</p>
+    <p>MENDEZ WOOD WORK AND FLOWERS nace del amor por la naturaleza, la madera y las flores. Fusionamos técnicas artesanales con diseño contemporáneo para crear piezas únicas que conectan con la esencia de lo natural y lo transforman en arte. Nuestro propósito es llevar belleza armonía y autenticidad a cada espacio. FABIOLA Y CLAUDIA MENDEZ.</p>
+    <p>Esta sección queda preparada para que posteriormente agreguemos la historia definitiva de la empresa, los nombres de sus fundadores y el relato que quieras compartir con tus clientes.</p>
   </div>
+  <img class="story-image" src="assets/galeria-1.jpeg" alt="Trabajo artesanal MENDEZ">
 </section>
 
-<section class="cta"><div><p class="eyebrow">DISEÑOS ESPECIALES</p><h2>¿Tienes una idea para tu espacio?</h2></div><a class="btn light" href="#contacto">Hablemos</a></section>
+<section class="cta"><div><p class="eyebrow">¿TIENES UNA IDEA?</p><h2>Cuéntanos qué quieres crear.</h2></div><a class="btn light" href="#contacto">Contactarnos</a></section>
 
-<section id="contacto" class="section contact-section">
-  <div><p class="eyebrow">CONTACTO</p><h2>Hagamos realidad tu próximo diseño.</h2><p class="lead">Los datos de contacto se configuran en <strong>script.js</strong>. Puedes cambiarlos sin modificar el diseño.</p></div>
+<section id="contacto" class="contact section">
+  <div><p class="eyebrow">CONTACTO</p><h2>Hablemos de tu próximo diseño.</h2><p class="section-intro">Configura tus datos comerciales en <strong>script.js</strong> cuando estés listo para recibir pedidos.</p></div>
   <div class="contact-cards">
-    <a class="contact-card" id="whatsappLink" href="#" target="_blank">💬 <span><strong>WhatsApp</strong><small>Pedidos y consultas</small></span></a>
-    <a class="contact-card" id="instagramLink" href="#" target="_blank">◎ <span><strong>Instagram</strong><small>@mendezwoodflowers</small></span></a>
-    <a class="contact-card" id="facebookLink" href="#" target="_blank">f <span><strong>Facebook</strong><small>MENDEZ WOOD WORK AND FLOWERS</small></span></a>
+    <a class="contact-card" id="whatsappLink" href="#" target="_blank" rel="noopener">💬 <span><strong>WhatsApp</strong><small>Pedidos y consultas</small></span></a>
+    <a class="contact-card" id="instagramLink" href="#" target="_blank" rel="noopener">◎ <span><strong>Instagram</strong><small>Nuestra colección</small></span></a>
+    <a class="contact-card" id="facebookLink" href="#" target="_blank" rel="noopener">f <span><strong>Facebook</strong><small>Conoce más de nosotros</small></span></a>
   </div>
 </section>
 </main>
 
-<footer><div class="brand footer-brand"><img src="assets/logo.jpeg" alt="MENDEZ"></div><p>© <span id="year"></span> MENDEZ WOOD WORK AND FLOWERS</p></footer>
+<footer><div class="footer-brand"><img src="assets/logo.jpeg" alt=""><span>MENDEZ WOOD WORK AND FLOWERS</span></div><p>© <span id="year"></span> MENDEZ WOOD WORK AND FLOWERS</p></footer>
 
 <div id="cartBackdrop" class="cart-backdrop" onclick="closeCart()"></div>
 <aside id="cartDrawer" class="cart-drawer">
   <div class="cart-header"><h2>Tu carrito</h2><button onclick="closeCart()">✕</button></div>
   <div id="cartItems" class="cart-items"></div>
-  <div class="cart-summary"><div><span>Total</span><strong id="cartTotal">$0</strong></div><button class="btn primary full" onclick="checkout()">Realizar pedido</button><p>El pedido se enviará por WhatsApp para confirmar disponibilidad, personalización y entrega.</p></div>
+  <div class="cart-summary"><div><span>Total</span><strong id="cartTotal">Por definir</strong></div><button class="btn primary full" onclick="checkout()">Continuar pedido</button><p>Los precios marcados como “Por definir” se confirmarán por WhatsApp. Cuando tengas precios definitivos, el total se calculará automáticamente.</p></div>
 </aside>
 
-<div id="checkoutModal" class="modal"><div class="modal-box"><button class="modal-close" onclick="closeCheckout()">✕</button><p class="eyebrow">FINALIZAR PEDIDO</p><h2>Datos del cliente</h2>
-<form id="checkoutForm">
-<label>Nombre completo<input name="name" required></label>
-<label>Teléfono<input name="phone" required></label>
-<label>Ciudad / dirección<input name="address" required></label>
-<label>Observaciones<textarea name="notes" rows="3" placeholder="Personalización, fecha de entrega, etc."></textarea></label>
-<button class="btn primary full" type="submit">Enviar pedido por WhatsApp</button>
-</form></div></div>
+<div id="checkoutModal" class="modal">
+  <div class="modal-box"><button class="modal-close" onclick="closeCheckout()">✕</button><p class="eyebrow">PEDIDO</p><h2>Datos del cliente</h2>
+    <form id="checkoutForm">
+      <label>Nombre completo<input name="name" required></label>
+      <label>Teléfono<input name="phone" required></label>
+      <label>Ciudad / dirección<input name="address" required></label>
+      <label>Observaciones<textarea name="notes" rows="3" placeholder="Personalización, fecha deseada, etc."></textarea></label>
+      <button class="btn primary full" type="submit">Enviar pedido por WhatsApp</button>
+    </form>
+  </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>

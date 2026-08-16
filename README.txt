@@ -1,18 +1,37 @@
-# MENDEZ WOOD WORK AND FLOWERS — tienda web
+# MENDEZ WOOD WORK AND FLOWERS — V3
 
-## Contenido
-- index.html: estructura de la página.
-- styles.css: diseño responsive.
-- script.js: catálogo, carrito y pedidos por WhatsApp.
-- assets/: fotografías.
+## Qué incluye
+- 8 diseños reales extraídos de la fotografía de colección.
+- Catálogo filtrable.
+- Carrito de compras con cantidades.
+- Soporte para "Precio por definir".
+- Formulario de pedido.
+- Pedido preparado para WhatsApp.
+- 2 videos MP4 reales con controles, reproducción en celular y poster.
+- Galería con fotografías reales.
+- Diseño responsive.
 
-## Antes de publicar
-1. Abre `script.js`.
-2. Cambia `CONFIG.whatsapp` por tu número de WhatsApp en formato internacional, sin +, espacios ni guiones.
-3. Cambia los enlaces de Instagram y Facebook.
-4. Reemplaza los productos temporales del arreglo `products`.
-5. Coloca tus fotografías en `assets/` usando los nombres producto-1.jpg ... producto-8.jpg y hero.jpg.
-6. Para videos, puedes reemplazar el bloque de galería por un elemento `<video>` o agregar tus videos a `assets/`.
+## Cómo cambiar productos y precios
+Abre `script.js` y busca `const products`.
+Cada producto tiene:
+- `name`: nombre.
+- `category`: categoría.
+- `price`: usa `null` mientras no tengas precio; después escribe un número, por ejemplo `180000`.
+- `description`: descripción.
+- `image`: nombre de la fotografía.
 
-## Publicación gratuita
-La carpeta puede publicarse en GitHub Pages. El archivo de entrada debe llamarse `index.html`.
+## Cómo configurar WhatsApp y redes
+Al inicio de `script.js`, en `CONFIG`, cambia:
+- `whatsapp`: código país + número, sin +, espacios ni guiones.
+- `instagram`: URL de Instagram.
+- `facebook`: URL de Facebook.
+
+## Publicación
+En tu repositorio GitHub:
+1. Reemplaza `index.html`, `styles.css` y `script.js`.
+2. Reemplaza/sube la carpeta `assets`.
+3. Haz Commit changes.
+4. GitHub Pages se actualizará automáticamente.
+
+## Nota sobre videos
+Los videos están en H.264 + yuv420p y se sirven como `video/mp4`, con `controls`, `playsinline` y `preload="metadata"` para mejorar compatibilidad en navegadores y celulares.
