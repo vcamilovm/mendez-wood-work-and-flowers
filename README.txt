@@ -1,37 +1,26 @@
-# MENDEZ WOOD WORK AND FLOWERS — V3
+MENDEZ WOOD WORK AND FLOWERS — V4
 
-## Qué incluye
-- 8 diseños reales extraídos de la fotografía de colección.
-- Catálogo filtrable.
-- Carrito de compras con cantidades.
-- Soporte para "Precio por definir".
-- Formulario de pedido.
-- Pedido preparado para WhatsApp.
-- 2 videos MP4 reales con controles, reproducción en celular y poster.
-- Galería con fotografías reales.
-- Diseño responsive.
+CORRECCIONES DE V4
+- Los 8 productos están escritos directamente en index.html: ya no dependen de JavaScript para aparecer.
+- Las fotografías de cada producto son elementos <img>, no fondos CSS.
+- El carrito usa JavaScript únicamente para agregar, quitar y modificar cantidades.
+- Los videos se sirven como MP4 optimizado para web con H.264/yuv420p y fast-start.
+- Se mantiene fallback de enlace "Abrir video" dentro del elemento video.
+- Los nombres y precios siguen siendo provisionales.
 
-## Cómo cambiar productos y precios
-Abre `script.js` y busca `const products`.
-Cada producto tiene:
-- `name`: nombre.
-- `category`: categoría.
-- `price`: usa `null` mientras no tengas precio; después escribe un número, por ejemplo `180000`.
-- `description`: descripción.
-- `image`: nombre de la fotografía.
+PUBLICACIÓN
+1. Descomprime este ZIP.
+2. En tu repositorio GitHub reemplaza index.html, styles.css, script.js.
+3. Reemplaza/sube la carpeta assets completa.
+4. Haz Commit changes.
+5. Espera a que GitHub Pages actualice la página.
 
-## Cómo configurar WhatsApp y redes
-Al inicio de `script.js`, en `CONFIG`, cambia:
-- `whatsapp`: código país + número, sin +, espacios ni guiones.
-- `instagram`: URL de Instagram.
-- `facebook`: URL de Facebook.
+DATOS COMERCIALES
+En script.js, arriba, modifica:
+CONFIG.whatsapp
+CONFIG.instagram
+CONFIG.facebook
 
-## Publicación
-En tu repositorio GitHub:
-1. Reemplaza `index.html`, `styles.css` y `script.js`.
-2. Reemplaza/sube la carpeta `assets`.
-3. Haz Commit changes.
-4. GitHub Pages se actualizará automáticamente.
-
-## Nota sobre videos
-Los videos están en H.264 + yuv420p y se sirven como `video/mp4`, con `controls`, `playsinline` y `preload="metadata"` para mejorar compatibilidad en navegadores y celulares.
+PRECIOS
+Los precios están en null porque todavía no los has definido.
+Cuando estén listos, podemos hacer una nueva versión para que el carrito calcule automáticamente los totales.
