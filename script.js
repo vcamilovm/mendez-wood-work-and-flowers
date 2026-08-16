@@ -3,7 +3,8 @@
  Cambia SOLO CONFIG cuando tengas tus datos comerciales.
 */
 const CONFIG={
-  whatsapp:"573000000000", // Código de país + número, sin +, espacios ni guiones.
+  // CAMBIA SOLO ESTOS 3 DATOS CUANDO LOS TENGAS:
+  whatsapp:"573000000000", // Ejemplo. Usa código de país + número, sin +, espacios ni guiones.
   instagram:"https://www.instagram.com/mendezwoodflowers/",
   facebook:"https://www.facebook.com/"
 };

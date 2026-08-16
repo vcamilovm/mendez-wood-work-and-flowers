@@ -1,26 +1,34 @@
-MENDEZ WOOD WORK AND FLOWERS — V4
+MENDEZ WOOD WORK AND FLOWERS — V5
 
-CORRECCIONES DE V4
-- Los 8 productos están escritos directamente en index.html: ya no dependen de JavaScript para aparecer.
-- Las fotografías de cada producto son elementos <img>, no fondos CSS.
-- El carrito usa JavaScript únicamente para agregar, quitar y modificar cantidades.
-- Los videos se sirven como MP4 optimizado para web con H.264/yuv420p y fast-start.
-- Se mantiene fallback de enlace "Abrir video" dentro del elemento video.
-- Los nombres y precios siguen siendo provisionales.
+V5 está pensada para GitHub Pages y evita que el catálogo dependa de JavaScript para aparecer.
 
-PUBLICACIÓN
-1. Descomprime este ZIP.
-2. En tu repositorio GitHub reemplaza index.html, styles.css, script.js.
-3. Reemplaza/sube la carpeta assets completa.
-4. Haz Commit changes.
-5. Espera a que GitHub Pages actualice la página.
+INCLUYE
+- 8 productos escritos directamente en index.html.
+- Carrito funcional con cantidades, eliminar y persistencia local.
+- Formulario de pedido.
+- Pedido por WhatsApp preparado.
+- Dos videos MP4 H.264/yuv420p, con controles y botón de respaldo "Ver video directamente".
+- Galería y diseño responsive.
+- Sin base de datos ni servidor: funciona como sitio estático gratuito.
 
-DATOS COMERCIALES
-En script.js, arriba, modifica:
+IMPORTANTE
+Como todavía no has definido precios ni me has dado el número real de WhatsApp de la empresa, V5 muestra "Precio por definir" y el botón de WhatsApp usa un número de demostración.
+Para activar el pedido real, abre script.js y cambia:
 CONFIG.whatsapp
 CONFIG.instagram
 CONFIG.facebook
 
-PRECIOS
-Los precios están en null porque todavía no los has definido.
-Cuando estén listos, podemos hacer una nueva versión para que el carrito calcule automáticamente los totales.
+PUBLICAR
+1. Descomprime el ZIP.
+2. Reemplaza index.html, styles.css y script.js en tu repositorio.
+3. Reemplaza la carpeta assets completa.
+4. Commit changes.
+5. Espera la actualización de GitHub Pages.
+
+PRUEBA
+- Abre la página en modo incógnito.
+- Entra a Colección: deben verse los 8 diseños sin depender de JavaScript.
+- Agrega 2 o 3 productos al carrito.
+- Cambia cantidades y elimina uno.
+- Recarga la página: el carrito debe conservarse.
+- Abre Videos: los videos deben mostrar su portada; si el navegador no reproduce el video, usa "Ver video directamente".
